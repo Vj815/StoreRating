@@ -40,3 +40,6 @@ Bash
 npm run dev
 
 Press ->o+enter
+
+Admin=admin@storerating.com
+Password=TestPass123!
