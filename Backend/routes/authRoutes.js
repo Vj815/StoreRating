@@ -27,6 +27,7 @@ router.post('/signup', userValidationRules, validateResult, async (req, res) => 
 });
 
 router.post('/login', async (req, res) => {
+  console.log("hello")
   const { email, password } = req.body;
   try {
     const [users] = await pool.query('SELECT * FROM users WHERE email = ?', [email]);
@@ -34,7 +35,10 @@ router.post('/login', async (req, res) => {
 
     const user = users[0];
 // Inside backend login controller - make sure it looks like this:
+console.log("Entered Password:", password);
+console.log("DB Hash:", user.password);
 const isMatch = await bcrypt.compare(password, user.password);
+console.log("isMatch:", isMatch);
 if (!isMatch) return res.status(401).json({ message: 'Invalid credentials' });
 
     const token = jwt.sign({ id: user.id, role: user.role }, process.env.JWT_SECRET, { expiresIn: '1d' });
