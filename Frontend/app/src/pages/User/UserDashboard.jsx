@@ -54,7 +54,7 @@ const UserDashboard = () => {
 
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <div style={{ padding: '30px', maxWidth: '1200px', margin: '0 auto' }}>
         <h2>Registered Business Stores Catalog</h2>
         {error && <p style={{ color: 'red' }}>{error}</p>}

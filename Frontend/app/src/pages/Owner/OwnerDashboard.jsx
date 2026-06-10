@@ -60,7 +60,7 @@ const OwnerDashboard = () => {
 
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <div style={{ padding: '30px', maxWidth: '1200px', margin: '0 auto' }}>
         {error ? (
           <div style={{ padding: '20px', backgroundColor: '#f8d7da', color: '#721c24', borderRadius: '4px' }}>

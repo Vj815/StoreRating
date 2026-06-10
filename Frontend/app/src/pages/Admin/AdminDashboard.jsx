@@ -119,7 +119,7 @@ const AdminDashboard = () => {
 
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <div style={{ padding: '30px', maxWidth: '1400px', margin: '0 auto' }}>
         <h2>System Administration Command Center</h2>
         {error && <p style={{ color: 'red' }}>{error}</p>}
